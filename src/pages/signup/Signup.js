@@ -54,8 +54,6 @@ const Signup = () => {
                     <input className='w-full btn btn-accent' value="Register" type="submit" />
                     <br></br>
                     <Link to='/login'>Already have account?</Link>
-                    <div className="divider">OR</div>
-                    <dutton className='btn btn-outline w-full'>Continue with Google</dutton>
                 </form>
             </div>
         </div>

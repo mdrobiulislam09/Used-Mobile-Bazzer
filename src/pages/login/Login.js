@@ -1,20 +1,53 @@
-import React from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
 
 const Login = () => {
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { logIn, loginGoogle } = useContext(AuthContext);
+    const { register, formState: { errors} } = useForm();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
+
+    const googleProvider = new GoogleAuthProvider()
     
-    const handleLogin = data =>{
-        console.log(data);
+    const handleLogin = (event) =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        logIn(email, password)
+        .then(result => {
+            const users = result.user
+            console.log(users)
+            form.reset()
+            navigate(from , {replace: true})
+        })
+        .catch(error => {
+            console.error(error)
+        })
+    }
+
+    const handlegoogle = () => {
+        loginGoogle(googleProvider)
+            .then(result => {
+                const users = result.user
+                console.log(users)
+                navigate(from , {replace: true})
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
 
     return (
         <div className='h-[400px] flex justify-center items-center'>
             <div className='w-96 p-7'>
                 <h2 className='text-4xl'>Login</h2>
-                <form onSubmit={handleSubmit(handleLogin)}>
+                <form onSubmit={handleLogin}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -39,7 +72,7 @@ const Login = () => {
                     <br></br>
                     <Link to='/signup'>Register</Link>
                     <div className="divider">OR</div>
-                    <dutton className='btn btn-outline w-full'>Continue with Google</dutton>
+                    <dutton onClick={handlegoogle} className='btn btn-outline w-full'>Continue with Google</dutton>
                 </form>
             </div>
         </div>
