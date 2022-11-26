@@ -6,6 +6,7 @@ import CatagoryProduct from '../catagoryProduct/CatagoryProduct';
 
 const Products = () => {
 const [phone, setPhone] = useState(null)
+const [date, setDate]= useState(new Date())
 
     const products = useLoaderData()
     return (
@@ -16,6 +17,7 @@ const [phone, setPhone] = useState(null)
                         key={n._id}
                         n={n}
                         setPhone={setPhone}
+                        setDate={setDate}
                     ></CatagoryProduct>)
                 }
             </div>
@@ -23,6 +25,7 @@ const [phone, setPhone] = useState(null)
                 phone &&
                 <BookingModal 
                 phone={phone}
+                date={date}
             ></BookingModal>}
         </section>
     );
