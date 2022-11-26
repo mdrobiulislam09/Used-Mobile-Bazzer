@@ -10,7 +10,7 @@ const Login = () => {
     const { register, formState: { errors} } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/'
+    const from = location.state?.from?.pathname || '/';
 
     const googleProvider = new GoogleAuthProvider()
     

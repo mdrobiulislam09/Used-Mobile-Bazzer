@@ -12,7 +12,7 @@ const CatagoryProduct = ({ n, setPhone }) => {
                 <p>Seller Name: {sellerName}</p>
                 <p>Location: {location}</p>
                 <p>Buy Price: {originalPrice}</p>
-                <p>Selling Price: m{sellPrice}</p>
+                <p>Selling Price: {sellPrice}</p>
                 <p>Use time:{used}</p>
                 <p>Post Date: {postDate}</p>
                 <div className="card-actions">
