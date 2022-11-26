@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CatagoryProduct = ({ n }) => {
+const CatagoryProduct = ({ n, setPhone }) => {
     const { location, used, picture, sellPrice, originalPrice, productName, sellerName, postDate } = n;
     return (
         <div className="card w-96 bg-base-100 mx-auto shadow-xl">
@@ -16,7 +16,7 @@ const CatagoryProduct = ({ n }) => {
                 <p>Use time:{used}</p>
                 <p>Post Date: {postDate}</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary">Book Now</button>
+                <label htmlFor="booking-modal" onClick={() => setPhone(n)} className="btn">Book Now</label>
                 </div>
             </div>
         </div>
