@@ -1,0 +1,70 @@
+[
+    {
+      "category_id": "6380e991f8eac56e8f23d0ee",
+      "location": "Dhaka",
+      "used": "1.5 years",
+      "picture": "https://www.mobiledokan.com/wp-content/uploads/2022/03/Realme-Narzo-50.jpg",
+      "sellPrice": 299,
+      "originalPrice": 449,
+      "productName": "Realme Narzo 50",
+      "sellerName": "md rasel mia",
+      "postDate": "21-11-2022"
+    },
+    {
+      "category_id": "6380e991f8eac56e8f23d0ee",
+      "location": "kustia",
+      "used": "1.2 years",
+      "picture": "https://www.mobiledokan.co/wp-content/uploads/2021/11/Realme-Narzo-50A-Prime-Blue.jpg",
+      "sellPrice": 250,
+      "originalPrice": 380,
+      "productName": "Realme-Narzo-50A-Prime-Blue",
+      "sellerName": "shak shadi",
+      "postDate": "22-11-2022"
+    },
+    {
+      "category_id": "6380e991f8eac56e8f23d0ef",
+      "location": "magura",
+      "used": "2.1 years",
+      "picture": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note10-pro-1.jpg",
+      "sellPrice": 499,
+      "originalPrice": 349,
+      "productName": "xiaomi-redmi-note10-pro",
+      "sellerName": "Deidre Mcguire",
+      "postDate": "21-11-2022"
+    },
+    {
+      "category_id": "6380e991f8eac56e8f23d0ef",
+      "index": 3,
+      "location": "pabna",
+      "used": "1.3 years",
+      "picture": "https://www.gizmochina.com/wp-content/uploads/2019/11/Xiaomi-Redmi-K30-500x500.jpg",
+      "sellPrice": 359,
+      "originalPrice": 599,
+      "productName": "Xiaomi-Redmi-K30",
+      "sellerName": "Blankenship Winters",
+      "postDate": "22-11-2022"
+      
+    },
+    {
+      "category_id": "6380e991f8eac56e8f23d0f0",
+      "location": "dhaka",
+      "used": ".5 years",
+      "picture": "https://images.samsung.com/bd/smartphones/galaxy-s22-ultra/images/galaxy-s22-ultra_highlights_kv_img.jpg",
+      "sellPrice": 250,
+      "originalPrice": 350,
+      "productName": "galaxy-s22-ultra",
+      "sellerName": "Alex Hale",
+      "postDate": "20-11-2022"
+    },
+    {
+      "category_id": "6380e991f8eac56e8f23d0f0",
+      "location": "narayanganj",
+      "used": "1.6 years",
+      "picture": "https://www.91-img.com/pictures/137138-v5-samsung-galaxy-a52-mobile-phone-large-1.jpg",
+      "sellPrice": 150,
+      "originalPrice": 299,
+      "productName": "samsung-galaxy-a52",
+      "sellerName": "Dona Charles",
+      "postDate": "19-11-2022"
+    }
+  ]

@@ -27,6 +27,7 @@ const Navbar = () => {
                 <li><Link onClick={handleLogOut}>LogOut</Link></li>
             </> :
                 <>
+                    <li><Link to='/signup'>Register</Link></li>
                     <li><Link to='/login'>Login</Link></li>
                 </>
         }
@@ -46,7 +47,7 @@ const Navbar = () => {
                 <h3 className='mb-2 text-3xl font-bold'>Used Mobile Bazer</h3>
             </div>
             <div className="navbar-center">
-                <>Get started</>
+                <></>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
