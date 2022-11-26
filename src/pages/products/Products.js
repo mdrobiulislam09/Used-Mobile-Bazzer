@@ -26,6 +26,7 @@ const [date, setDate]= useState(new Date())
                 <BookingModal 
                 phone={phone}
                 date={date}
+                setPhone={setPhone}
             ></BookingModal>}
         </section>
     );

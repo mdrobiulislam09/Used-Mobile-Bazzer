@@ -12,8 +12,7 @@ const Catagories = ({ product }) => {
                 <div className="card-body">
                     <div className="card-actions justify-end">
                         <h2 className="card-title blue m-3">{catagory}</h2>
-                        <p>{_id}</p>
-                        <Link to ={`/product/${_id}`}>See Products</Link>
+                        <Link to ={`/product/${_id}`}><button className='btn btn-primary'>See Products</button></Link>
                     </div>
                 </div>
             </div>
