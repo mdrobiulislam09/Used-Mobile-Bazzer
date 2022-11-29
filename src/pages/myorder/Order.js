@@ -6,8 +6,8 @@ const Order = ({ book, i, handleDelete }) => {
         <div>
             <tr>
                 <th>{i + 1}</th>
-                <td>{email}</td>
                 <td>{mobileModel}</td>
+                <td>{email}</td>
                 <td>Blue</td>
                 <td>Blue</td>
                 <td>Blue</td>
