@@ -25,10 +25,26 @@ const BookingModal = ({ phone, date, setPhone}) => {
             price: price,
             location: location,
             MobileNumber: number,
-            EmailAddress: email
+             email
         }
         console.log(booking)
         setPhone(null)
+
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type':'application/json',
+            },
+            body: JSON.stringify(booking)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.acknowledge){
+                form.reset()
+            }
+        })
+        .catch(err => console.error(err))
     }
 
     return (

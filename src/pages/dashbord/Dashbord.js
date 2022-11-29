@@ -4,7 +4,7 @@ import AdminBord from '../adminBord/AdminBord';
 
 const Dashbord = () => {
     return (
-        <div>
+        <div className='flex'>
             <AdminBord></AdminBord>
             <Outlet></Outlet>
         </div>
