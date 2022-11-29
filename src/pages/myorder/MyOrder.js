@@ -47,12 +47,11 @@ const MyOrder = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Mobil Name</th>
+                            <th>Mobile Name</th>
                             <th>Email</th>
-                            <th>Favorite Color</th>
-                            <th>Favorite Color</th>
-                            <th>Favorite Color</th>
-                            <th>Favorite Color</th>
+                            <th>Mobile Number</th>
+                            <th>Price</th>
+                            <th>Delete Now</th>
                         </tr>
                     </thead>
                     <tbody>
