@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             {
                 path: '/product/:category_id',
                 element: <PrivateRouter><Products></Products></PrivateRouter>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/${params.category_id}`)
+                loader: ({params}) => fetch(`https://twelve-server-mdrobiulislam09.vercel.app/product/${params.category_id}`)
             },
             { 
                 path: '/dashbord',

@@ -5,7 +5,7 @@ const Catagory = () => {
     const [catagori, setCatagory] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://twelve-server-mdrobiulislam09.vercel.app/products')
         .then(res => res.json())
         .then(data => setCatagory(data))
     }, [])

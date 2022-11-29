@@ -8,7 +8,7 @@ const MyOrder = () => {
     const {user} = useContext(AuthContext)
     const [booked, setBooked] = useState([])
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`
+    const url = `https://twelve-server-mdrobiulislam09.vercel.app/bookings?email=${user?.email}`
 
     const {data: bookings =[]} = useQuery({
         queryKey: ['bookings', user?.email],
@@ -26,7 +26,7 @@ const MyOrder = () => {
     const handleDelete = id => {
         const procced = window.confirm('Are you')
         if(procced){
-            fetch(`http://localhost:5000/bookings/${id}`, {
+            fetch(`https://twelve-server-mdrobiulislam09.vercel.app/bookings/${id}`, {
                 method: 'DELETE',
             })
             .then(res => res.json())

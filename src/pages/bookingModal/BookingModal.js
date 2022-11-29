@@ -30,7 +30,7 @@ const BookingModal = ({ phone, date, setPhone}) => {
         console.log(booking)
         setPhone(null)
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://twelve-server-mdrobiulislam09.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type':'application/json',
