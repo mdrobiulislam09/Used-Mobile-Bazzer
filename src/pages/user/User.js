@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const User = () => {
-    const {data: users = []} = useQuery({
+    const {data: users = [], refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
             const res = await fetch('https://twelve-server-mdrobiulislam09.vercel.app/users');
@@ -17,7 +18,10 @@ const User = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            if(data.modifiedCount > 0){
+                toast.success('Succesfully make Admin')
+                refetch();
+            };
         })
     }
 
