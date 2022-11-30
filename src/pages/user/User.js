@@ -12,7 +12,7 @@ const User = () => {
     })
 
     const handleAdmin = (id) =>{
-        fetch(`http://localhost:5000/users/admin/${id}`,{
+        fetch(`https://twelve-server-mdrobiulislam09.vercel.app/users/admin/${id}`,{
             method: 'PUT'
         })
         .then(res => res.json())
