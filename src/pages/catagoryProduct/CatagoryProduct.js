@@ -16,7 +16,7 @@ const CatagoryProduct = ({ n, setPhone }) => {
                 <p>Use time:{used}</p>
                 <p>Post Date: {postDate}</p>
                 <div className="card-actions">
-                <label htmlFor="booking-modal" onClick={() => setPhone(n)} className="btn">Book Now</label>
+                <label htmlFor="booking-modal" onClick={() => setPhone(n)} className="btn btn-success">Book Now</label>
                 </div>
             </div>
         </div>

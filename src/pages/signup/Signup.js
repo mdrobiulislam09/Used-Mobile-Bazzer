@@ -1,21 +1,24 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { json, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Signup = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, reset, formState: { errors }, handleSubmit } = useForm();
 
     const {createUser, updateUser} = useContext(AuthContext)
 
     const [createUserEmail, setCreateUserEmail] = useState('')
 
     const handleSignUp = data =>{
-        console.log(data);
+        console.log(data)
+        reset()
         createUser(data.email, data.password)
         .then(result => {
             const user = result.user;
             console.log(user)
+            toast.success('User created Successfully')
             const userInfo = {
                 displayName: data.name
             }
@@ -25,7 +28,10 @@ const Signup = () => {
             })
             .catch(error => console.log(error))
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error)
+        })
+        
     }
 
     const saveUser = (name, email) => {
@@ -47,6 +53,7 @@ const Signup = () => {
         <div className='h-[400px] flex justify-center items-center'>
             <div className='w-96 p-7'>
                 <h2 className='text-4xl'>Sign Up</h2>
+                
                 <form onSubmit={handleSubmit(handleSignUp)}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
@@ -69,7 +76,8 @@ const Signup = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input type="password" {...register("password",{
-                            required: "Email Address is required"
+                            required: "Passwoed is required",
+                            minLength: { value: 6, message: "Password must be 6 characters long" }
                             })}  className="input input-bordered w-full max-w-xs"/>
                     </div>
                     {errors.name && <p className='text-red-600' role="alert">{errors.name?.message}</p>}
@@ -77,6 +85,7 @@ const Signup = () => {
                     {errors.password && <p className='text-red-600' role="alert">{errors.password?.message}</p>}
                     <br></br>
                     <input className='w-full btn btn-accent' value="Register" type="submit" />
+                    <Toaster/>
                     <br></br>
                     <Link to='/login'>Already have account?</Link>
                 </form>

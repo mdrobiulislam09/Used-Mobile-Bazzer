@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
 
 const BookingModal = ({ phone, date, setPhone}) => {
     const { productName, sellPrice } = phone;
-     
+    
     const { user } = useContext(AuthContext)
     console.log(user)
 
@@ -25,11 +26,12 @@ const BookingModal = ({ phone, date, setPhone}) => {
             price: price,
             location: location,
             MobileNumber: number,
-             email
+            email
         }
         console.log(booking)
+        alert('This product added in Dashbord')
         setPhone(null)
-
+        
         fetch('https://twelve-server-mdrobiulislam09.vercel.app/bookings', {
             method: 'POST',
             headers: {
@@ -67,10 +69,11 @@ const BookingModal = ({ phone, date, setPhone}) => {
                         <p>Email</p>
                         <input type="email" name='email' value={user?.email} required className="input input-bordered w-full max-w-xs" />
                         <p>Name</p>
+                        <Toaster/>
                         <input type="text" name='user' value={user?.displayName} required className="input input-bordered w-full max-w-xs" />
                         <br/>
                         <br/>
-                        <input type="submit" value="OK" className="w-full btn btn-accent" />
+                        <input type="submit" value="OK" className="w-full btn btn-info" />
                     </form>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
+
 const Login = () => {
 
     const { logIn, loginGoogle } = useContext(AuthContext);
@@ -23,11 +24,11 @@ const Login = () => {
         .then(result => {
             const users = result.user
             console.log(users)
-            form.reset()
             navigate(from , {replace: true})
         })
         .catch(error => {
             console.error(error)
+            form.reset()
         })
     }
 

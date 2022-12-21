@@ -24,7 +24,7 @@ const MyOrder = () => {
     })
 
     const handleDelete = id => {
-        const procced = window.confirm('Are you')
+        const procced = window.confirm('Are you sure want to delete this product')
         if(procced){
             fetch(`https://twelve-server-mdrobiulislam09.vercel.app/bookings/${id}`, {
                 method: 'DELETE',
